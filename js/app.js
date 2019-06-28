@@ -112,13 +112,21 @@ for (i = 0; i < hobbits.length; i++){
 function keepItSecretKeepItSafe() { 
   console.log("3: keepItSecretKeepItSafe");
 
+const div = document.createElement('div')
+div.id = 'the-ring';
+div.className = 'magic-imbued-jewelry';
+const mrFrodo = document.querySelector('Frodo Baggins');
+console.log(mrFrodo);
+//mrFrodo.appendChild(div);
+
+}
+
   // create a div with an id of `'the-ring'`
 
   // give the div a class of `'magic-imbued-jewelry'`
 
   // add the ring as a child of `Frodo`
 
-}
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
@@ -130,6 +138,17 @@ function keepItSecretKeepItSafe() {
 
 function makeBaddies() { 
   console.log("4: makeBaddies");
+  const badBaddies = document.createElement('ul');
+
+for (i = 0; i < baddies.length; i++){
+           const li = document.createElement('li');
+           li.className = 'baddyBads';
+           li.innerText = baddies[i];
+           badBaddies.appendChild(li);
+}
+  const mordor = document.getElementById('Mordor');
+
+  mordor.appendChild(badBaddies);
 
   // display an unordered list of baddies in Mordor
 
