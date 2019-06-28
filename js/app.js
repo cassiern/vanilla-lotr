@@ -115,8 +115,8 @@ function keepItSecretKeepItSafe() {
 const div = document.createElement('div')
 div.id = 'the-ring';
 div.className = 'magic-imbued-jewelry';
-const mrFrodo = document.getElementById('Frodo Baggins');
-console.log(mrFrodo);
+const mrFrodo = document.querySelector('.hobbit');
+//console.log(mrFrodo);
 mrFrodo.appendChild(div);
 
 }
@@ -227,22 +227,39 @@ function beautifulStranger() {
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
 
 
-// ============//check element tree to see if anything changes
+// ============
 // Chapter 8
 // ============
 
 function forgeTheFellowShip() { 
   console.log("8: forgeTheFellowShip");
+
+const rivendell = document.getElementById('Rivendell');
+const theFellowship = document.createElement('div');
+theFellowship.innerText = 'the-fellowship';
+rivendell.appendChild(theFellowship); 
+let i = 0;
+  while(i <= hobbits.length && i <= buddies.length){
+        theFellowship += hobbits[i];
+        theFellowship += buddies[i];
+        window.alert('Another has joined The Fellowship!');
+  }
+
+
   // create a new div called `'the-fellowship'` within `rivendell`
   // add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
-  // after each character is added make an alert that they // have joined your party
+  // after each character is added make an alert that they 
+    // have joined your party
   
-  // NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
+  // NOTE: This won't change what you see in the browser.  
+        //Use your Elements tab of your Inspector tools 
+        //to make sure that it worked.
 }
 
 
 // COMMIT YOUR WORK
-// The commit message should read: "Chapter 8 complete - The Fellowship is created"
+// The commit message should read: "Chapter 8 complete - 
+          //The Fellowship is created"
 
 // ============
 // Chapter 9
