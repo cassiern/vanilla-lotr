@@ -234,17 +234,21 @@ function beautifulStranger() {
 function forgeTheFellowShip() { 
   console.log("8: forgeTheFellowShip");
 
-const rivendell = document.getElementById('Rivendell');
-const theFellowship = document.createElement('div');
-theFellowship.innerText = 'the-fellowship';
-rivendell.appendChild(theFellowship); 
-let i = 0;
-  while(i <= hobbits.length && i <= buddies.length){
-        theFellowship += hobbits[i];
-        theFellowship += buddies[i];
-        window.alert('Another has joined The Fellowship!');
-  }
+  const rivendell = document.querySelector('#Rivendell');
+  const theFellowship = document.createElement('div');
+        theFellowship.innerText = 'the-fellowship';
+        rivendell.appendChild(theFellowship); 
+  let fellowship = [];
 
+  for(let i = 0; i < hobbits.length; i++){
+    let moreHobbits = hobbits[i];
+
+    fellowship.push(moreHobbits);
+    console.log(fellowship)
+    // alert(`Another Hobbit has joined the Fellowship!`);
+  } const destination = document.querySelector('#Rivendell')
+  destination.childNodes[3].append(fellowship);
+}
 
   // create a new div called `'the-fellowship'` within `rivendell`
   // add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
@@ -254,7 +258,7 @@ let i = 0;
   // NOTE: This won't change what you see in the browser.  
         //Use your Elements tab of your Inspector tools 
         //to make sure that it worked.
-}
+
 
 
 // COMMIT YOUR WORK
@@ -267,8 +271,16 @@ let i = 0;
 
 function theBalrog() { 
   console.log("9: theBalrog");
+
+buddies[0] = 'Gandalf the White';
+const gandalf = document.querySelector('.theBuds');
+
+
+document.getElementsByClassName('.theBuds').backgroundColor = 'white';
+
    // change the `'Gandalf'` text to `'Gandalf the White'`
-   // apply the following style to the element, make the // background 'white', add a grey border
+   // apply the following style to the element, make the 
+        // background 'white', add a grey border
 }
 
 // COMMIT YOUR WORK
@@ -281,6 +293,10 @@ function theBalrog() {
 
 function hornOfGondor() { 
   console.log("10: hornOfGondor");
+
+  alert('The gondor horn has been sounded!');
+  alert('Boromir has been killed by the Uruk-hai!');
+
   // pop up an alert that the horn of gondor has been blown
   // Boromir's been killed by the Uruk-hai!
   // Remove `Boromir` from the Fellowship
