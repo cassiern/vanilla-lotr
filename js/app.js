@@ -115,9 +115,9 @@ function keepItSecretKeepItSafe() {
 const div = document.createElement('div')
 div.id = 'the-ring';
 div.className = 'magic-imbued-jewelry';
-const mrFrodo = document.querySelector('Frodo Baggins');
+const mrFrodo = document.getElementById('Frodo Baggins');
 console.log(mrFrodo);
-//mrFrodo.appendChild(div);
+mrFrodo.appendChild(div);
 
 }
 
@@ -216,6 +216,9 @@ function leaveTheShire() {
 
 function beautifulStranger() { 
   console.log("7: beautifulStranger");
+
+  buddies[3] = 'Aragorn';
+
 
   // change the `'Strider'` text to `'Aragorn'`
 }
