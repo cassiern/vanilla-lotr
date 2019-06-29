@@ -273,10 +273,10 @@ function theBalrog() {
   console.log("9: theBalrog");
 
 buddies[0] = 'Gandalf the White';
-const gandalf = document.querySelector('.theBuds');
 
 
-document.getElementsByClassName('.theBuds').backgroundColor = 'white';
+const theBuds = document.querySelector('.theBuds').style.background = "white";
+document.querySelector(".theBuds").style.borderColor = "grey";
 
    // change the `'Gandalf'` text to `'Gandalf the White'`
    // apply the following style to the element, make the 
@@ -291,11 +291,13 @@ document.getElementsByClassName('.theBuds').backgroundColor = 'white';
 // Chapter 10
 // ============
 
-function hornOfGondor() { 
-  console.log("10: hornOfGondor");
+ function hornOfGondor() { 
+//   console.log("10: hornOfGondor");
 
-  alert('The gondor horn has been sounded!');
-  alert('Boromir has been killed by the Uruk-hai!');
+//   alert('The gondor horn has been sounded!');
+//   alert('Boromir has been killed by the Uruk-hai!');
+// const removeB = document.getElementByTagName('ul').getAttribute('.theBuds')[4];
+// console.log(removeB);
 
   // pop up an alert that the horn of gondor has been blown
   // Boromir's been killed by the Uruk-hai!
