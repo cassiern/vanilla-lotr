@@ -365,15 +365,17 @@ function weWantsIt() {
 
 function thereAndBackAgain() { 
 //   console.log("13: thereAndBackAgain");
-//   // remove `Gollum` and `the Ring` from the document
-//   //DONE// Move all the `hobbits` back to `the shire`
+  // remove `Gollum` and `the Ring` from the document
+  //DONE// Move all the `hobbits` back to `the shire`
+  const byeBye = document.getElementById('gollum');
+  //console.log(byeBye)
+  //byeBye.parentNode.removeChild(byeBye);
 
-//   const byeBye = document.getElementById('Gollum');
-//   byeBye.parentNode.removeChild(byeBye);
-
-
-//   const theeShire = document.getElementById('The-Shire');
-//   theeShire.appendChild(hobbitsList);
+  const theRing = document.getElementById('the-ring');
+  const byeRing = theRing.parentNode.removeChild(theRing);
+  
+  const theeShire = document.getElementById('The-Shire');
+  theeShire.appendChild(hobbitsList);
  }
 
 // COMMIT YOUR WORK
