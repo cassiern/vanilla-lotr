@@ -236,17 +236,24 @@ function forgeTheFellowShip() {
 
   const rivendell = document.querySelector('#Rivendell');
   const theFellowship = document.createElement('div');
-        theFellowship.innerText = 'the-fellowship';
+  theFellowship.id = 'theFellowship'
+
         rivendell.appendChild(theFellowship); 
-  let fellowship = [];
+        let fellowship = [];
 
   for(let i = 0; i < hobbits.length; i++){
     let moreHobbits = hobbits[i];
-
     fellowship.push(moreHobbits);
-    console.log(fellowship)
-    // alert(`Another Hobbit has joined the Fellowship!`);
-  } const destination = document.querySelector('#Rivendell')
+    //Dalert("Another Hobbit has joined the Fellowship!");
+  } for (let i = 0; i <buddies.length; i++){
+    let moreBuddies = buddies[i];
+    fellowship.push(moreBuddies);
+    //alert("Another Buddie has joined the Fellowship!")
+  }
+
+
+
+  const destination = document.querySelector('#Rivendell')
   destination.childNodes[3].append(fellowship);
 }
 
@@ -271,16 +278,16 @@ function forgeTheFellowShip() {
 
 function theBalrog() { 
   console.log("9: theBalrog");
-
-buddies[0] = 'Gandalf the White';
-
+buddies[0]= 'Gandalf the White';
 
 const theBuds = document.querySelector('.theBuds').style.background = "white";
-document.querySelector(".theBuds").style.borderColor = "grey";
+const theeBuds = document.querySelector('.theBuds').style.borderColor = "grey";
 
-   // change the `'Gandalf'` text to `'Gandalf the White'`
-   // apply the following style to the element, make the 
-        // background 'white', add a grey border
+// NEED  GANDALF TO WHITE
+// AND BORDER TO GREY
+      // change the `'Gandalf'` text to `'Gandalf the White'`
+     // apply the following style to the element, make the 
+    // background 'white', add a grey border
 }
 
 // COMMIT YOUR WORK
@@ -292,15 +299,16 @@ document.querySelector(".theBuds").style.borderColor = "grey";
 // ============
 
  function hornOfGondor() { 
-//   console.log("10: hornOfGondor");
+   console.log("10: hornOfGondor");
 
-//   alert('The gondor horn has been sounded!');
-//   alert('Boromir has been killed by the Uruk-hai!');
-// const removeB = document.getElementByTagName('ul').getAttribute('.theBuds')[4];
-// console.log(removeB);
+  alert('The gondor horn has been sounded!');
+  alert('Boromir has been killed by the Uruk-hai!');
+  const removeB = document.querySelector('#theFellowship');
 
-  // pop up an alert that the horn of gondor has been blown
-  // Boromir's been killed by the Uruk-hai!
+  
+
+  //DONE// pop up an alert that the horn of gondor has been blown
+  //DONE// Boromir's been killed by the Uruk-hai!
   // Remove `Boromir` from the Fellowship
 }
 
@@ -312,10 +320,18 @@ document.querySelector(".theBuds").style.borderColor = "grey";
 // Chapter 11
 // ============
 
-function itsDangerousToGoAlone() { 
+function itsDangerousToGoAlone() { //NEED TO DO ALL
+                                  //////////////////
   console.log("11: itsDangerousToGoAlone");
-  // take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
-  // add a div with an id of `'mount-doom'` to `Mordor`
+  // take `Frodo` and `Sam` out of the fellowship and move 
+  // them to `Mordor`
+  //DONE// add a div with an id of `'mount-doom'` to `Mordor`
+  const theFellowship = document.createElement('div');
+  const mordor = document.getElementById('Mordor');
+  const divDoom = document.createElement('div');
+  divDoom.id = 'mount-doom';
+  mordor.appendChild(divDoom);
+
 }
 
 
@@ -329,7 +345,18 @@ function itsDangerousToGoAlone() {
 
 function weWantsIt() { 
   console.log("12: weWantsIt");
-  // Create a div with an id of `'gollum'` and add it to Mordor
+
+  document.getElementById('the ring');
+
+  const gollum = document.createElement('div');
+  gollum.id = 'gollum';
+ 
+  const mordor = document.getElementById('Mordor');
+  console.log(mordor)
+  //mordor.appendChild('gollum');
+
+
+  //DONE// Create a div with an id of `'gollum'` and add it to Mordor
   // Remove `the ring` from `Frodo` and give it to `Gollum`
   // Move Gollum into Mount Doom
 }
@@ -343,10 +370,17 @@ function weWantsIt() {
 // ============
 
 function thereAndBackAgain() { 
-  console.log("13: thereAndBackAgain");
-  // remove `Gollum` and `the Ring` from the document
-  // Move all the `hobbits` back to `the shire`
-}
+//   console.log("13: thereAndBackAgain");
+//   // remove `Gollum` and `the Ring` from the document
+//   //DONE// Move all the `hobbits` back to `the shire`
+
+//   const byeBye = document.getElementById('Gollum');
+//   byeBye.parentNode.removeChild(byeBye);
+
+
+//   const theeShire = document.getElementById('The-Shire');
+//   theeShire.appendChild(hobbitsList);
+ }
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 13 complete -Gollum and the ring are gone, the baddies are done, and the hobbits are back in the shire".
