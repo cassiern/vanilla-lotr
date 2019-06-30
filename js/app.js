@@ -347,14 +347,8 @@ function weWantsIt() {
   console.log("12: weWantsIt");
 
   document.getElementById('the ring');
-
   const gollum = document.createElement('div');
   gollum.id = 'gollum';
- 
-  const mordor = document.getElementById('Mordor');
-  console.log(mordor)
-  //mordor.appendChild('gollum');
-
 
   //DONE// Create a div with an id of `'gollum'` and add it to Mordor
   // Remove `the ring` from `Frodo` and give it to `Gollum`
