@@ -217,11 +217,24 @@ function leaveTheShire() {
 function beautifulStranger() { 
   console.log("7: beautifulStranger");
 
-  buddies[3] = 'Aragorn';
+
+const budlets = document.querySelectorAll('li');
+//console.log(budlets);
+
+for(let i =0; i < budlets.length; i++){
+  if((budlets[i].innerText) === 'strider'){
+
+    (budlets[i].innerText) = 'Aragorn';
+  }
+}
+
+
+}
+
 
 
   // change the `'Strider'` text to `'Aragorn'`
-}
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
@@ -244,15 +257,12 @@ function forgeTheFellowShip() {
   for(let i = 0; i < hobbits.length; i++){
     let moreHobbits = hobbits[i];
     fellowship.push(moreHobbits);
-    //Dalert("Another Hobbit has joined the Fellowship!");
+    //alert("Another Hobbit has joined the Fellowship!");
   } for (let i = 0; i <buddies.length; i++){
     let moreBuddies = buddies[i];
     fellowship.push(moreBuddies);
     //alert("Another Buddie has joined the Fellowship!")
   }
-
-
-
   const destination = document.querySelector('#Rivendell')
   destination.childNodes[3].append(fellowship);
 }
@@ -278,16 +288,18 @@ function forgeTheFellowShip() {
 
 function theBalrog() { 
   console.log("9: theBalrog");
-buddies[0]= 'Gandalf the White';
 
-const theBuds = document.querySelector('.theBuds').style.background = "white";
-const theeBuds = document.querySelector('.theBuds').style.borderColor = "grey";
+const gandalf = document.querySelector('li');
+gandalf.innerText = 'Gandalf the White';
 
-// NEED  GANDALF TO WHITE
-// AND BORDER TO GREY
-      // change the `'Gandalf'` text to `'Gandalf the White'`
-     // apply the following style to the element, make the 
-    // background 'white', add a grey border
+gandalf.style.textAlign = 'center';
+
+document.querySelector('.theBuds').style.background = "white";
+document.querySelector('.theBuds').style.border = "5px solid grey";
+
+// change the `'Gandalf'` text to `'Gandalf the White'`
+// apply the following style to the element, make the 
+ // background 'white', add a grey border
 }
 
 // COMMIT YOUR WORK
@@ -303,7 +315,8 @@ const theeBuds = document.querySelector('.theBuds').style.borderColor = "grey";
 
   alert('The gondor horn has been sounded!');
   alert('Boromir has been killed by the Uruk-hai!');
-  const removeB = document.querySelector('#theFellowship');
+  const removeB = document.querySelector('#theFellowship') //removeB is an object
+
 
   
 
@@ -320,8 +333,7 @@ const theeBuds = document.querySelector('.theBuds').style.borderColor = "grey";
 // Chapter 11
 // ============
 
-function itsDangerousToGoAlone() { //NEED TO DO ALL
-                                  //////////////////
+function itsDangerousToGoAlone() { 
   console.log("11: itsDangerousToGoAlone");
   // take `Frodo` and `Sam` out of the fellowship and move 
   // them to `Mordor`
